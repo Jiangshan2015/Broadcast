@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDS-JZ-bWc">
+                                <rect key="frame" x="203" y="552" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="7Z1-2E-xbn"/>
+                                    <constraint firstAttribute="height" constant="45" id="93L-mV-DeL"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="playVoice"/>
+                                <connections>
+                                    <action selector="pauseClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a3k-cr-gfR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuR-gx-jVK">
+                                <rect key="frame" x="288" y="552" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6s3-HV-tTE"/>
+                                    <constraint firstAttribute="width" constant="45" id="HSI-Ht-Ffc"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="voice"/>
+                                <connections>
+                                    <action selector="broadcastClicked:" destination="BYZ-38-t0r" eventType="touchDragInside" id="zk7-ec-BBB"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QTn-hv-kT1">
+                                <rect key="frame" x="42" y="100" width="291" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="272" id="K5y-Tm-XjE"/>
+                                    <constraint firstAttribute="width" constant="291" id="hg4-fz-z5d"/>
+                                </constraints>
+                                <string key="text">　   君不见，黄河之水天上来，奔流到海不复回。
+　　君不见，高堂明镜悲白发，朝如青丝暮成雪！
+　　人生得意须尽欢，莫使金樽空对月。
+　　天生我材必有用，千金散尽还复来。
+　　烹羊宰牛且为乐，会须一饮三百杯。
+　　岑夫子，丹丘生，将进酒，杯莫停。
+　　与君歌一曲，请君为我倾耳听。
+　　钟鼓馔玉不足贵，但愿长醉不复醒。
+　　古来圣贤皆寂寞，惟有饮者留其名。
+　　陈王昔时宴平乐，斗酒十千恣欢谑。
+　　主人何为言少钱，径须沽取对君酌。
+　　五花马、千金裘，呼儿将出换美酒，与尔同销万古愁！</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kDS-JZ-bWc" secondAttribute="bottom" constant="70" id="3Mf-qk-TfG"/>
+                            <constraint firstItem="QTn-hv-kT1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="Ayk-Sw-4lq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HuR-gx-jVK" secondAttribute="bottom" constant="70" id="Kzr-0n-L0B"/>
+                            <constraint firstItem="HuR-gx-jVK" firstAttribute="leading" secondItem="kDS-JZ-bWc" secondAttribute="trailing" constant="40" id="hsT-gQ-4mM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HuR-gx-jVK" secondAttribute="trailing" constant="26" id="oUx-Sv-CTI"/>
+                            <constraint firstItem="QTn-hv-kT1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w1d-KE-dN9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="voiceText" destination="QTn-hv-kT1" id="Weq-XA-VW1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="playVoice" width="220" height="220"/>
+        <image name="voice" width="220" height="220"/>
+    </resources>
+</document>
